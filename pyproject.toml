@@ -4,7 +4,12 @@ version = "0.1.0"
 description = "A highly performant opensource intelligence CLI tool for finding usernames."
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "aiohttp>=3.13.5",
+    "anyio>=4.13.0",
+    "msgspec>=0.21.1",
+    "rich>=15.0.0",
+]
 
 [dependency-groups]
 dev = ["ruff>=0.15.11"]
