@@ -4,6 +4,12 @@ required-version = ">=0.15.2"
 fix = true
 unsafe-fixes = true
 
+
+[format]
+docstring-code-format = true
+preview = true
+quote-style = "single"
+
 [lint]
 select = [
     "E",
@@ -75,28 +81,3 @@ docstring-quotes = "single"
 exempt-modules = ["typing", "typing_extensions"]
 quote-annotations = false
 strict = false
-
-runtime-evaluated-base-classes = [
-    "pydantic.BaseModel",
-    "sqlalchemy.orm.DeclarativeBase",
-]
-
-runtime-evaluated-decorators = [
-    "pydantic.validate_call",
-    "pydantic.dataclasses.dataclass",
-    "fastapi.FastAPI.get",
-    "fastapi.FastAPI.post",
-    "fastapi.FastAPI.put",
-    "fastapi.FastAPI.patch",
-    "fastapi.FastAPI.delete",
-    "fastapi.FastAPI.options",
-    "fastapi.FastAPI.head",
-]
-
-[lint.pylint]
-allow-dunder-method-names = ["__tablename__", "__table_args__"]
-
-[format]
-docstring-code-format = true
-preview = true
-quote-style = "single"
